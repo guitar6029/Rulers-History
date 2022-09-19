@@ -1,0 +1,50 @@
+.king {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  min-height: 500px;
+}
+
+.king_name {
+  font-size: 4em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.king_empire {
+  font-size: 2.5em;
+}
+
+.king_reign {
+  font-size: 1.7em;
+}
+
+.king_description {
+  width: 400px;
+}
+
+.img_container {
+  width: 400px;
+  height: 400px;
+}
+
+.img_container > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 700px) {
+  .king_name {
+    font-size: 2em;
+  }
+
+  .king_empire {
+    font-size: 1.5em;
+  }
+}

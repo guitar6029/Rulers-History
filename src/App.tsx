@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
+import Kings from './components/Kings';
+import Searchbar from './components/Searchbar/Searchbar';
 
 function App() {
+
+  const title : string = "Top 6 Notorious Rulers of the History";
+  const [searchVal, setSearchVal] = useState<string>("");
+
+ const handleValue = (e:string) => {
+    console.log(e);
+    setSearchVal(e);
+ }
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app'>
+      <Searchbar searchInputVal={handleValue}/>
+      <h3 id="main_title">{title}</h3>
+      <Kings filterSearchVal={searchVal} />
     </div>
   );
 }

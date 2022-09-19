@@ -1,0 +1,26 @@
+.search{
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(31, 33, 31);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search > input {
+    width: 500px;
+    font-family: inherit;
+}
+
+.search > button {
+    font-family: inherit;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px){
+    .search > input {
+        width: 250px;
+    }
+}
